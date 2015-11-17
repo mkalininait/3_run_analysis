@@ -123,5 +123,5 @@ The output data set is a table of 68 variables:
  * `fBodyBodyGyroMag.std`
  * `fBodyBodyGyroJerkMag.std`
 
-The data set contains data from both trainig and test sets.
-No measurement units are provided in the raw data.
+The data set contains data from both training and test sets.
+No measurement units are provided.
