@@ -11,13 +11,13 @@ Description of the original experiment is available on the website:
 ### Original data
 
 For each record it is provided:
- * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
- * Triaxial Angular velocity from the gyroscope. 
- * A 561-feature vector with time and frequency domain variables. 
- * Its activity label (in a separate file). 
- * An identifier of the subject who carried out the experiment (in a separate file).
+ * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration
+ * Triaxial Angular velocity from the gyroscope
+ * A 561-feature vector with time and frequency domain variables
+ * Its activity label (in a separate file)
+ * An identifier of the subject who carried out the experiment (in a separate file)
 
-Description of variables and the data itself are available on the here:
+Description of variables and the data itself are available here:
 <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>
 
 ### Cleaning process
@@ -25,10 +25,11 @@ Description of variables and the data itself are available on the here:
 Performed on OS X El Capitan Ver. 10.11.1, R ver. 3.2.2 (2015-08-14).
 
 The `run_analysis.R` script performs the following data processing:
+
 1. Reads the original files and merges the training and the test sets:
- * `X_train.txt` + `X_test.txt` -> `dataSet` (table of 561 variables) 
- * `Y_train.txt` + `Y_test.txt` -> `actSet` (table of activity codes)
- * `subject_train.txt` + `subject_test.txt` -> `subjSet` (table of subject numbers)
+  * `X_train.txt` + `X_test.txt` -> `dataSet` (table of 561 variables) 
+  * `Y_train.txt` + `Y_test.txt` -> `actSet` (table of activity codes)
+  * `subject_train.txt` + `subject_test.txt` -> `subjSet` (table of subject numbers)
 2. Appropriately labels the data set with descriptive variable names:
  * Reads the variable descriptive names from `features.txt`
  * Converts the names to valid names by excluding dashes and parenthesis
@@ -49,9 +50,11 @@ The `run_analysis.R` script performs the following data processing:
 
 ### Output data set
 
-The output data set is a table of 68 variables. 
+The output data set is a table of 68 variables:
+
 1. `Activity` - one of six possible values (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 2. `Subject` -  one of 30 participants, numeric value in the range (1:30)
+
 3-68. Average values of Means and Standard Deviations estimated from the accelerometer and gyroscope signals:
  * `tBodyAcc.mean.X`
  * `tBodyAcc.mean.Y`
